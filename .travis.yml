@@ -1,0 +1,26 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: true
+node_js:
+  - '8'
+  - '6'
+os:
+  - linux
+env:
+  - BUILD_LEADER_ID=3
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      os: "linux"
+      script: echo "Deploying to npm ..."
+      before_script:
+        - npm prune
+      after_success:
+        - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

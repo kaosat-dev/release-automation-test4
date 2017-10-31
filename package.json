@@ -1,0 +1,27 @@
+{
+  "name": "@kaosat-dev/dummy-repo",
+  "version": "0.0.1",
+  "description": "",
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js",
+    "build-browser": "mkdir -p dist && browserify index.js -o dist/browser.js",
+    "build": "npm run build-browser && git add dist && git commit 'updated build'",
+    "semantic-release": "corp-semantic-release --pre-commit build && npm publish"
+  },
+  "author": "Mark 'kaosat-dev' Moissette",
+  "license": "MIT",
+  "devDependencies": {
+    "corp-semantic-release": "^6.3.1",
+    "semantic-release": "^8.2.0",
+    "tape": "^4.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaosat-dev/release-automation-test4.git"
+  },
+  "dependencies": {
+    "browserify": "^14.5.0"
+  }
+}
