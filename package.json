@@ -7,14 +7,13 @@
   "scripts": {
     "test": "tape test.js",
     "build-browser": "mkdir -p dist && browserify index.js -o dist/browser.js",
-    "build": "npm run build-browser && git add dist && git commit 'updated build'",
+    "build": "npm run build-browser && git add dist && git commit -m 'updated build'",
     "semantic-release": "corp-semantic-release --pre-commit build && npm publish"
   },
   "author": "Mark 'kaosat-dev' Moissette",
   "license": "MIT",
   "devDependencies": {
     "corp-semantic-release": "^6.3.1",
-    "semantic-release": "^8.2.0",
     "tape": "^4.8.0"
   },
   "repository": {
