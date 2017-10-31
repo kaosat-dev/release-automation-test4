@@ -7,7 +7,7 @@
   "scripts": {
     "test": "tape test.js",
     "build-browser": "mkdir -p dist && browserify index.js -o dist/browser.js",
-    "build": "npm run build-browser && git add dist && git commit -m 'updated build'",
+    "build": "npm run build-browser && git add dist/",
     "semantic-release": "git checkout master && corp-semantic-release --branch master --pre-commit build"
   },
   "author": "Mark 'kaosat-dev' Moissette",
