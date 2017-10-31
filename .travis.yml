@@ -3,14 +3,13 @@ cache:
   directories:
     - ~/.npm
 notifications:
-  email: true
+  email: false
 node_js:
   - '8'
-  - '6'
 os:
   - linux
 env:
-  - BUILD_LEADER_ID=3
+  - BUILD_LEADER_ID=2
 jobs:
   include:
     - stage: npm release
